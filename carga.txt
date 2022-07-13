@@ -1,0 +1,23 @@
+
+CREATE TABLE donaciones (
+    id                 INTEGER NOT NULL,
+    nombre             VARCHAR2(50),
+    "Apellido Paterno" VARCHAR2(50),
+    "Apellido Materno" VARCHAR2(50),
+    montos             INTEGER,
+    "Monto exacto"     VARCHAR2(6)
+);
+
+ALTER TABLE donaciones ADD CONSTRAINT donaciones_pk PRIMARY KEY ( id );
+
+CREATE TABLE productos (
+    id        INTEGER NOT NULL,
+    nombre    VARCHAR2(50),
+    valor     INTEGER,
+    categoria INTEGER,
+    stock     INTEGER
+);
+
+ALTER TABLE productos ADD CONSTRAINT productos_pk PRIMARY KEY ( id );
+
+
