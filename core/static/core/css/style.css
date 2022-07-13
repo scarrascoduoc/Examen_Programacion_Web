@@ -1,0 +1,36 @@
+body{
+    background-image:url(/core/static/core/img/fondo.jpg);
+    }
+
+.imgRedonda {
+    width: 1500px;
+    height:562px;
+    border-radius:50%;
+}
+img{
+	max-width: 100%;
+	max-height: 50%;
+}
+.gallery img{
+	background-color: #ffffff;
+	padding: 15px;
+	width: 100%;
+	box-shadow: 0 0 15px rgba(0,0,0,0.3);
+	cursor: pointer;
+}
+#gallery-modal .modal-img{
+	width: 100%;
+}
+
+main > .container {
+    padding: 30px 0;
+
+}
+.imgDonaciones {
+    width: 750px;
+    height:500px;
+}
+.imgNosotros {
+    width: 150px;
+    height: 300px;
+}

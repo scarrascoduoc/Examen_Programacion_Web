@@ -1,0 +1,42 @@
+{% extends 'core/inicio.html' %} {% load static %} {% block extrastatic %}
+{% endblock %}{% block content %}
+    <div class="container">
+      <div class="row"style="text-align:center">
+        <div class="col-12">
+            <h4>En este apartado se puede conocer mejor a cada uno de los integrantes del equipo</h4>
+        </div>
+      </div><br>
+         <div class="row">
+            <div class="col-12">
+              <!-- Button trigger modal -->
+              <img src="{%static 'core/img/ejemploperfil.jpg'%}"class="imgNosotros">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                Más información
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Saul Carrasco</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4"><img src="{%static 'core/img/ejemploperfil.jpg'%}"></div>
+                        <div class="col-4"></div>
+                      </div>
+                      <p>Ingeniero Informático</p>
+                      <p>Edad: 22 años</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+      {% endblock %}

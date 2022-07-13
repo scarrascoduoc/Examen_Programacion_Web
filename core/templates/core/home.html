@@ -1,0 +1,50 @@
+{% extends 'core/inicio.html' %} {% load static %} {% block extrastatic %}
+{% endblock %}{% block content %}
+
+<div id="central"> <div class="container-fluid mt-3">
+  <h2>"Compra consciente"</h2>
+  <h4>Somos un grupo de dos amigas, creadoras de está pagina. Cada producto que compres estás ayudando a una de las seis fundaciones con las cuales trabajamos</h4>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static 'core/img/carrusel1.1.jpg' %}" class="imgRedonda" alt="..." href="">
+      <div class="carousel-caption d-none d-md-block">
+        <h4><a href="{% url 'nosotros' %}" id="Nosotros2"> Nosotros</a></h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'core/img/carrusel2.jpg' %}" class="imgRedonda" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4><a href="{% url 'tienda' %}" id="Tienda2"> Tienda</a></h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'core/img/carrusel3' %}" class="imgRedonda" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4><a href="{% url 'add_donacion' %}" id="Donaciones2"> Donaciones</a></h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{%static 'core/img/carrusel4.jpg' %}" class="imgRedonda" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4><a href="{% url 'contacto' %}" id="Contacto2">Contacto</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>
+{% endblock %}

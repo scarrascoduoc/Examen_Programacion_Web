@@ -1,0 +1,61 @@
+{% extends 'core/inicio.html' %} 
+
+{% block titulo_principal %}
+
+<div class="head">
+  
+<div id="titulo_pagina" ><h3>Lista de Donaciones</h3></div>
+</div>
+{% endblock %} 
+
+{% block content %}
+{% if user.is_authenticated %}
+  <h3>Listado de Donaciones</h3>
+
+
+  {% if object_list %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for donaciones in object_list %}
+      <tr>
+        <td>{{ donaciones.nombre }}</td>
+        <td>{{donaciones.apellido_pat}}</td>
+        <td>{{ donaciones.apellido_mat}}</td>
+        <td>{{ donaciones.monto }}</td>
+
+        {% comment %} <td>
+          <a class="btn btn-primary" href="{% url 'update_pacientes' pacientes.id %}"
+            >Editar</a
+          >
+        </td>
+        <td>
+          <a class="btn btn-danger" href="{% url 'del_pacientes' pacientes.id %}"
+            >Eliminar</a
+          >
+        </td> {% endcomment %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{% url 'home' %} " class="btn btn-info">Volver al inicio</a>
+  <a href="{% url 'add_donacion' %}" class="btn btn-success">Agregar Donacion</a>
+  {% else %}
+  <h1>No hay registros de donaciones</h1>
+  <a href="{% url 'home' %} " class="btn btn-info">Volver al inicio</a>
+  <a href="{% url 'add_donacion' %}" class="btn btn-success">Agregar Donacion</a>
+  {% endif %}
+{% endif %}
+{% if not user.is_authenticated %}
+<h1 style="text-align: center; justify-content: center;">Antes de Realizar una donación debes iniciar sesión</h1>
+<a href="{% url 'home' %}" class="btn btn-info">Volver al inicio</a>
+<a href="{% url 'login' %}" class="btn btn-success">Iniciar sesión</a>
+{% endif %}  
+{% endblock %}

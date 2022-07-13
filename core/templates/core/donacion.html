@@ -1,0 +1,27 @@
+{% extends 'core/inicio.html' %} 
+
+{% block titulo_principal %}
+
+<div class="head">
+  
+    <div id="titulo_pagina" ><h3>Donar</h3></div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+    
+    <a href="{% url 'home' %} " class="btn btn-info">Volver al inicio</a>
+    <h1>Dona y hazte socio de nuestra fundación</h1>
+    
+    <div class="content container">
+        <form  method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <p>Monto minimo de donación $1000</p>
+            <input type="submit" value="Submit">
+            <a href="{% url 'list_donacion' %}" class="btn btn-warning">Listar Donaciones</a>
+        </form>
+    </div>
+
+{% endblock %}
